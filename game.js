@@ -47,7 +47,7 @@ class Juego {
 			this.lightSequence()
 			this.addClickEvents()
 			if (this.logToConsole){
-				for (let i = 0; i < this.sequence.length; i++){
+				for (let i = 0; i < this.level; i++){
 					console.log(this.numberToColor(this.sequence[i]))
 				}
 			}
