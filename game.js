@@ -185,6 +185,9 @@ function logCheatcode(ev){
 	if (code.length===11){
 		confirmCheats()
 	}
+	if(code.length>11){
+		code.splice(0, code.length)
+	}
 }
 
 function confirmCheats(){
