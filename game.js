@@ -41,9 +41,7 @@ class Juego {
 		}
 	}
 	nextLevel() {
-		if(this.endless) {
-			console.clear()
-		}
+		console.clear()
 		this.subLevel = 0
 		setTimeout(() => {
 			this.lightSequence()
