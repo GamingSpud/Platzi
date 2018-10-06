@@ -5,6 +5,7 @@ const verde = document.getElementById('verde')
 const btnEmpezar = document.getElementById('btnEmpezar')
 const btnStandard = document.getElementById('standard')
 const btnEndless = document.getElementById('endless')
+const btnWarning = document.getElementById('warning')
 const LAST_LEVEL = 10
 const LOG_CHEAT_CODE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]
 var code = []
@@ -169,6 +170,7 @@ class Juego {
 		setTimeout(() => {
 			this.removeClickEvents()
 			this.nextLevel()
+			btnWarning.classList.toggle('hide')
 		}, 1400)
 	}
 }
@@ -190,6 +192,7 @@ function confirmCheats(){
 		window.removeEventListener('keyup', logCheatcode)
 		window.juego.logToConsole = true
 		window.juego.lightAll()
+		btnWarning.classList.toggle('hide')
 	} else {
 		code.splice(0, code.length)
 	}
@@ -198,3 +201,4 @@ function confirmCheats(){
 function checkCheat(n, i){
 	return n === LOG_CHEAT_CODE[i]
 }
+
