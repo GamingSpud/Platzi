@@ -85,6 +85,16 @@
         top: calc(57% - 50px);
         left: calc(65% - 205px)
 	  }
+	  .btn-hidden {
+		width: 200px;
+		height:80px;
+		background: #dedede;
+        color: #2c3e50;
+        font-size: 1.2rem;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(80% - 200px)
+	  }
       .hide {
         display: none;
       }
@@ -102,6 +112,7 @@
       <button id="btnEmpezar" class="alert-start">Empezar a jugar!</button>
 	  <button id="standard" class="btn-1" onclick="empezarJuego(false)">Standard</button>
 	  <button id="endless" class="btn-2" onclick="empezarJuego(true)">Endless</button>
+	  <alert id="warning" class="btn-hidden hide">Psst... Mira la consola</alert>
     </div>
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
     <script src = 'game.js'></script>
